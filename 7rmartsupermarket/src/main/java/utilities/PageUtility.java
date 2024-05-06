@@ -86,13 +86,13 @@ public class PageUtility {
 	{
 		driver.switchTo().alert().dismiss();
 	}
-	public String alertUsingGetText(WebDriver driver)
+	public String getTextOfAlert(WebDriver driver)
 	{
 		return driver.switchTo().alert().getText();
 	}
-	public void alertUsingSendKeys(WebDriver driver,String value)
+	public void enterValueToHandleAlert(WebDriver driver,String value)
 	{
-		driver.switchTo().alert().sendKeys(value);;
+		driver.switchTo().alert().sendKeys(value);
 	}
 	
 	

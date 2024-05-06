@@ -10,7 +10,7 @@ import utilities.ExcelUtility;
 public class ManageLocationTest extends Base {
 	
 	@Test
-	public void verifyTheTable()
+	public void verifyAParticularNameIsPresentInTable()
 	{
 		String username=ExcelUtility.getString(1, 0, "LoginPage");
 		String password=ExcelUtility.getString(1, 1, "LoginPage");
