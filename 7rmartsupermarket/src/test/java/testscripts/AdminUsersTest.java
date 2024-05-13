@@ -29,7 +29,7 @@ public class AdminUsersTest extends Base {
 	{
 		String username=ExcelUtility.getString(1, 0, "LoginPage");
 		String password=ExcelUtility.getString(1, 1, "LoginPage");
-		String searchUsername=ExcelUtility.getString(2, 0, "AdminUserPage");
+		String searchUsername=ExcelUtility.getString(3, 0, "AdminUserPage");
 		String userType=ExcelUtility.getString(2, 2, "AdminUserPage");
 		LoginPage loginpage=new LoginPage(driver);
 		loginpage.enterUsernameOnUsernameFieldPasswordOnPasswordFieldAndClickOnSignInButton(username,password);
@@ -60,7 +60,7 @@ public class AdminUsersTest extends Base {
 		String username=ExcelUtility.getString(1, 0, "LoginPage");
 		String password=ExcelUtility.getString(1, 1, "LoginPage");
 		String searchUsername=ExcelUtility.getString(5, 0, "AdminUserPage");
-		String userType=ExcelUtility.getString(5, 2, "AdminUserPage");
+		String userType=ExcelUtility.getString(5, 5, "AdminUserPage");
 		String updatedUserType=ExcelUtility.getString(2, 2, "AdminUserPage");
 		LoginPage loginpage=new LoginPage(driver);
 		loginpage.enterUsernameOnUsernameFieldPasswordOnPasswordFieldAndClickOnSignInButton(username,password);

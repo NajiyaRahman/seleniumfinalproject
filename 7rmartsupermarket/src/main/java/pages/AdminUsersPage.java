@@ -4,7 +4,6 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-
 import utilities.PageUtility;
 import utilities.WaitUtility;
 
@@ -28,7 +27,7 @@ WebDriver driver;
 	@FindBy(xpath="//input[@id='un']") private WebElement searchUsernameField;
 	@FindBy(xpath="//select[@id='ut']") private WebElement searchSelectUserType;
 	@FindBy(xpath="//button[@name='Search']") private WebElement finalSearchButton;
-	@FindBy(xpath="//table[contains(@class,'bordered table')]//tr//td[text()='Najiya']") private WebElement searchName;
+	@FindBy(xpath="//table[contains(@class,'table')]//tr//td[text()='Naji88']") private WebElement searchName;
 	@FindBy(xpath="//div[@class='card']") private WebElement table;
 	@FindBy(xpath="//table[contains(@class,'bordered table')]//tbody//tr//td[5]//a[2]") private WebElement deleteButton;
 	@FindBy(xpath="//div[contains(@class,'alert-dismissible')]")private WebElement userDeletedAlertMessage;

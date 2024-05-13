@@ -1,25 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Suite">
-  <test thread-count="5" name="Test">
-    <classes>
-      
-      
-      <class name="testscripts.LoginTest">
-<methods>
-<include name="verifyUserIsAbleToLoginWithValidUsernameAndValidPassword()"></include>
-<include name="verifyUserIsUnableToLoginWithInvalidUsernameAndInValidPassword()"></include>
-</methods>
-
+<listeners>
+<listener class-name="listenerforreport.Listeners"></listener>
+</listeners>
+<test thread-count="5" name="Test">
+<parameter name="browser" value="Chrome"></parameter>
+<classes>
+<class name="testscripts.LoginTest">
+   <methods>
+      <include name="verifyUserIsAbleToLoginWithValidUsernameAndValidPassword"></include>
+   </methods>
 </class>
-<class name="testscripts.ManageSliderTest">
-</class>
-
 <class name="testscripts.AdminUsersTest">
-<methods>
-<include name="verifyUserIsAbleAddNewAdmin()"></include>
-</methods>
+   <methods>
+      <include name="verifyUserIsAbleToSearchAdmin"></include>
+   </methods>
 </class>
-    </classes>
-  </test> <!-- Test -->
+</classes>
+</test> <!-- Test -->
 </suite> <!-- Suite -->

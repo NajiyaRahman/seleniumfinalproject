@@ -14,7 +14,6 @@ WebDriver driver;
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
 	}
-	
 	@FindBy(xpath="(//a[@class='small-box-footer']//following::a[text()='More info '])[5]") private WebElement manageOfferCodeTile;
 	@FindBy(xpath="//a[contains(@class,'rounded btn-danger')]") private WebElement newButton;
 	@FindBy(xpath="//input[@id='offer_code']") private WebElement offerCodeField;

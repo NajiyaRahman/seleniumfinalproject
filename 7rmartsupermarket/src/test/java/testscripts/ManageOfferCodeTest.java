@@ -26,6 +26,4 @@ public class ManageOfferCodeTest extends Base {
 	assertTrue(isAlertMessageDisplayed,"user is not able to add offer code");
 	
 	}
-	
-
 }

@@ -1,5 +1,7 @@
 package utilities;
 
+import java.util.List;
+
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -93,6 +95,14 @@ public class PageUtility {
 	public void enterValueToHandleAlert(WebDriver driver,String value)
 	{
 		driver.switchTo().alert().sendKeys(value);
+	}
+	public int getRowCount(List<WebElement> rows)
+	{
+		return rows.size();		
+	}
+	public int getColumnCount(List<WebElement> columns)
+	{
+		return columns.size();		
 	}
 	
 	

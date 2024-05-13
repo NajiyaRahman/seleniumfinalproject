@@ -13,7 +13,6 @@ WebDriver driver;
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
 	}
-	
 	@FindBy(xpath="//input[@name='username']") private WebElement usernameField;
 	@FindBy(xpath="//input[@name='password']") private WebElement passwordField;
 	@FindBy(xpath="//button[text()='Sign In']") private WebElement signInButton;
