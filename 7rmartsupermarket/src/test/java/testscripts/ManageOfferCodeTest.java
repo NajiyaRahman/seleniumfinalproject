@@ -10,7 +10,7 @@ import utilities.ExcelUtility;
 
 public class ManageOfferCodeTest extends Base {
 	
-	@Test
+	@Test(retryAnalyzer=retry.Retry.class,description="verify user is able to add Offercode")
 	public void verifyUserIsAbleToAddOffercode()
 	{
 	String username=ExcelUtility.getString(1, 0, "LoginPage");

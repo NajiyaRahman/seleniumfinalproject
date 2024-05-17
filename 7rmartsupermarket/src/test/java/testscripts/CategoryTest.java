@@ -11,7 +11,7 @@ import utilities.ExcelUtility;
 
 public class CategoryTest extends Base {
 	
-	@Test
+	@Test(retryAnalyzer=retry.Retry.class,description="verify user is a able to add new category")
 	public void verifyUserIsAbleToAddNewCategory()
 	{
 		String username=ExcelUtility.getString(1, 0, "LoginPage");

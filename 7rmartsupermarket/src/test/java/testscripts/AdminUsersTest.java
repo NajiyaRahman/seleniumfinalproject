@@ -9,7 +9,7 @@ import utilities.ExcelUtility;
 
 public class AdminUsersTest extends Base {
 	
-	@Test
+	@Test(retryAnalyzer=retry.Retry.class,description="verify user is able to add new admin",priority=1)
 	public void verifyUserIsAbleToAddNewAdmin()
 	{
 		String username=ExcelUtility.getString(1, 0, "LoginPage");
@@ -24,7 +24,7 @@ public class AdminUsersTest extends Base {
 		boolean isAlertMessageDisplayed=adminuserspage.verifyAlertMessage();
 		assertTrue(isAlertMessageDisplayed, "user is not able to add a new admin");
 	}
-	@Test
+	@Test(retryAnalyzer=retry.Retry.class,description="verify user is able to search admin",priority=3)
 	public void verifyUserIsAbleToSearchAdmin()
 	{
 		String username=ExcelUtility.getString(1, 0, "LoginPage");
@@ -38,7 +38,7 @@ public class AdminUsersTest extends Base {
 		boolean isNameDisplayed=adminuserspage.searchNameInTable();
 		assertTrue(isNameDisplayed, "admin name is not found in the table");
 	}
-	@Test
+	@Test(retryAnalyzer=retry.Retry.class,description="verify user is able to delete admin user",priority=2)
 	public void verifyUserIsAbleToDeleteAnAdminUser()
 	{
 		String username=ExcelUtility.getString(1, 0, "LoginPage");
@@ -54,7 +54,7 @@ public class AdminUsersTest extends Base {
 		assertTrue(isUserDeletedAlertMessageDisplayed, "user is not able to delete admin users");
 	}
 	
-	@Test
+	@Test(retryAnalyzer=retry.Retry.class,description="verify user is able to update usertype of an existing user",priority=4)
 	public void verifyUserIsAbleToUpdateUserTypeOfAnExistingUser()
 	{
 		String username=ExcelUtility.getString(1, 0, "LoginPage");

@@ -9,7 +9,8 @@ import pages.ManageLocationPage;
 import utilities.ExcelUtility;
 
 public class ManageLocationTest extends Base {
-	@Test
+	
+	@Test(retryAnalyzer=retry.Retry.class,description="verify user is able to add new location")
 	public void verifyUserIsAbleToAddNewLocation()
 	{
 		String username=ExcelUtility.getString(1, 0, "LoginPage");

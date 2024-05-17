@@ -9,7 +9,8 @@ import utilities.Constants;
 import utilities.ExcelUtility;
 
 public class MobileSliderTest extends Base {
-	@Test
+	
+	@Test(retryAnalyzer=retry.Retry.class,description="verify user is able to a add new mobile slider")
 	public void verifyUserIsAbleToAddNewMobileSlider()
 	{
 		String username=ExcelUtility.getString(1, 0, "LoginPage");

@@ -18,7 +18,6 @@ public class Base {
 	WebDriver driver;
 	public ScreenShotUtility scrshot;
 	
-	
 	@BeforeMethod(alwaysRun=true)
 	@Parameters("browser")
 	public void initialiseBrowser(String browser) throws Exception
